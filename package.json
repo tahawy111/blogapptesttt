@@ -4,7 +4,11 @@
   "description": "backend of blog application",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix ./client ",
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "author": "ibrahim nasser",
   "license": "ISC",
