@@ -48,11 +48,7 @@ app.use("/api/comments" , require("./routes/commentsRoute"));
 app.use("/api/categories" , require("./routes/categoriesRoute"));
 app.use("/api/password" , require("./routes/passwordRoute"))
 
-// static files
-app.use(express.static(path.join(__dirname, './front-end/build')))
-app.get('*' , function(req,res){
-  res.sendFile(path.join(__dirname , './front-end/build/index.html'))
-})
+
 
 // Error Handler Middleware
 app.use(notFond)
